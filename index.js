@@ -27,7 +27,7 @@ const thirdpromise = () => {
     })
 }
 
-Promise.any([firstpromise(), secondpromise(), thirdpromise()])
+Promise.all([firstpromise(), secondpromise(), thirdpromise()])
 .then((promise) => {
     console.log(promise)
 })
@@ -42,56 +42,56 @@ Promise.any([firstpromise(), secondpromise(), thirdpromise()])
 // რომელიც პირველი დაასწრებს შესრულებას ის დატა უნდა მივიღო კონსოლში.
 
 
-const userN1 = () => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve([{
-                id: 1,
-                name: "lana",
-                isadmine: true
-            }])
-        },2000)
-    })
-}
+// const userN1 = () => {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve([{
+//                 id: 1,
+//                 name: "lana",
+//                 isadmine: true
+//             }])
+//         },2000)
+//     })
+// }
 
-const userN2 = () => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve([{
-                id: 2,
-                name: "luka",
-                isadmine: false
-            }])
-        },5000)
-    })
-}
+// const userN2 = () => {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve([{
+//                 id: 2,
+//                 name: "luka",
+//                 isadmine: false
+//             }])
+//         },5000)
+//     })
+// }
 
-const userN3 = () => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve([{
-                id: 3,
-                name: "lela",
-                isadmine: false
-            }])
-        },7000)
-    })
-}
+// const userN3 = () => {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve([{
+//                 id: 3,
+//                 name: "lela",
+//                 isadmine: false
+//             }])
+//         },7000)
+//     })
+// }
 
-const userN4 = () => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve([{
-                id: 4,
-                name: "gia",
-                isadmine: false
-            }])
-        },3000)
-    })
-}
+// const userN4 = () => {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve([{
+//                 id: 4,
+//                 name: "gia",
+//                 isadmine: false
+//             }])
+//         },3000)
+//     })
+// }
 
-Promise.race([userN1(), userN2(), userN3(), userN4(),])
-.then((user) => {
-    console.log(user)
-})
-.catch(console.log)
+// Promise.race([userN1(), userN2(), userN3(), userN4(),])
+// .then((user) => {
+//     console.log(user)
+// })
+// .catch(console.log)
